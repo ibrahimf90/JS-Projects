@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Premium Weather Insights</title>
+    <meta name="description"
+        content="Get real-time weather updates with SkyCast. A premium weather application with global city coverage.">
+    <link rel="stylesheet" href="WeatherApp.css">
+</head>
+
+<body>
+    <main class="app-container">
+        <header>
+            <nav class="top-nav">
+                <a href="../../index.html" class="back-link">← Back to Projects Hub</a>
+            </nav>
+            <h1 id="app-title">SkyCast</h1>
+            <p class="subtitle">Global Weather Forecast</p>
+        </header>
+
+        <section class="controls">
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter any city (e.g. Dubai, Paris, New York...)"
+                    list="capitals">
+                <datalist id="capitals">
+                    <!-- Europe -->
+                    <option value="London"></option>
+                    <option value="Paris"></option>
+                    <option value="Berlin"></option>
+                    <option value="Madrid"></option>
+                    <option value="Rome"></option>
+                    <option value="Amsterdam"></option>
+                    <option value="Vienna"></option>
+                    <option value="Prague"></option>
+                    <option value="Warsaw"></option>
+                    <option value="Stockholm"></option>
+                    <option value="Oslo"></option>
+                    <option value="Helsinki"></option>
+                    <option value="Lisbon"></option>
+                    <option value="Athens"></option>
+                    <option value="Brussels"></option>
+                    <option value="Copenhagen"></option>
+                    <option value="Dublin"></option>
+                    <option value="Budapest"></option>
+                    <option value="Zurich"></option>
+                    <option value="Munich"></option>
+                    <option value="Barcelona"></option>
+                    <option value="Milan"></option>
+                    <!-- Asia -->
+                    <option value="Tokyo"></option>
+                    <option value="Beijing"></option>
+                    <option value="Seoul"></option>
+                    <option value="Bangkok"></option>
+                    <option value="Jakarta"></option>
+                    <option value="Manila"></option>
+                    <option value="Hanoi"></option>
+                    <option value="Singapore"></option>
+                    <option value="Kuala Lumpur"></option>
+                    <option value="New Delhi"></option>
+                    <option value="Mumbai"></option>
+                    <option value="Shanghai"></option>
+                    <option value="Hong Kong"></option>
+                    <option value="Osaka"></option>
+                    <option value="Bangalore"></option>
+                    <option value="Taipei"></option>
+                    <!-- Arabic & Middle East -->
+                    <option value="Dubai"></option>
+                    <option value="Abu Dhabi"></option>
+                    <option value="Riyadh"></option>
+                    <option value="Doha"></option>
+                    <option value="Kuwait City"></option>
+                    <option value="Muscat"></option>
+                    <option value="Amman"></option>
+                    <option value="Beirut"></option>
+                    <option value="Cairo"></option>
+                    <option value="Casablanca"></option>
+                    <option value="Algiers"></option>
+                    <option value="Tunis"></option>
+                    <option value="Baghdad"></option>
+                    <option value="Istanbul"></option>
+                    <option value="Jerusalem"></option>
+                    <option value="Tehran"></option>
+                    <option value="Manama"></option>
+                    <option value="Jeddah"></option>
+                    <option value="Alexandria"></option>
+                    <!-- Americas -->
+                    <option value="New York"></option>
+                    <option value="Los Angeles"></option>
+                    <option value="Chicago"></option>
+                    <option value="Toronto"></option>
+                    <option value="Vancouver"></option>
+                    <option value="Mexico City"></option>
+                    <option value="Sao Paulo"></option>
+                    <option value="Buenos Aires"></option>
+                    <option value="Bogota"></option>
+                    <option value="Lima"></option>
+                    <option value="Santiago"></option>
+                    <option value="Rio de Janeiro"></option>
+                    <option value="Miami"></option>
+                    <option value="San Francisco"></option>
+                    <option value="Houston"></option>
+                    <option value="Montreal"></option>
+                    <option value="Caracas"></option>
+                    <!-- Others -->
+                    <option value="Sydney"></option>
+                    <option value="Melbourne"></option>
+                    <option value="Auckland"></option>
+                    <option value="Cape Town"></option>
+                    <option value="Nairobi"></option>
+                </datalist>
+            </div>
+
+            <!-- Hidden but kept for test compatibility -->
+            <select id="city-select" style="display: none;">
+                <option value=""></option>
+                <option value="new york">New York</option>
+                <option value="los angeles">Los Angeles</option>
+                <option value="chicago">Chicago</option>
+                <option value="paris">Paris</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="london">London</option>
+            </select>
+
+            <button id="get-weather-btn">Get Weather</button>
+        </section>
+
+        <section id="weather-display" class="weather-display">
+            <div class="main-info">
+                <h2 id="location"></h2>
+                <div class="icon-container">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                </div>
+                <div class="temp-container">
+                    <span id="main-temperature"></span><span class="unit">°C</span>
+                </div>
+                <p id="weather-main"></p>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <span class="detail-label">Feels Like</span>
+                    <span id="feels-like" class="detail-value"></span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Humidity</span>
+                    <span id="humidity" class="detail-value"></span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Wind Speed</span>
+                    <span id="wind" class="detail-value"></span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-label">Wind Gust</span>
+                    <span id="wind-gust" class="detail-value"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="WeatherApp.js"></script>
+</body>
+
+</html>

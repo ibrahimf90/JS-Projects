@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Ingredient Converter</title>
+    <link rel="stylesheet" href="receipe.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="bg-gradient"></div>
+    <div class="bg-blur"></div>
+
+    <div class="navbar-back">
+      <a href="../../index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Projects Hub
+      </a>
+    </div>
+
+    <main class="container">
+      <div class="recipe-header">
+        <i class="fas fa-utensils recipe-icon"></i>
+        <h1>Recipe Ingredient Converter</h1>
+        <p class="recipe-subtitle">
+          Convert and scale your recipe ingredients effortlessly
+        </p>
+      </div>
+
+      <form id="recipe-form" class="recipe-form">
+        <div class="form-row">
+          <div class="input-container">
+            <label for="ingredient">Ingredient:</label>
+            <input
+              type="text"
+              id="ingredient"
+              placeholder="e.g., flour, sugar, butter"
+              required
+            />
+          </div>
+
+          <div class="input-container">
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              id="quantity"
+              step="any"
+              placeholder="e.g., 2"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-container">
+            <label for="unit">Unit:</label>
+            <select id="unit">
+              <option value="cup">Cup</option>
+              <option value="gram">Gram</option>
+              <option value="ounce">Ounce</option>
+              <option value="teaspoon">Teaspoon</option>
+            </select>
+          </div>
+
+          <div class="input-container">
+            <label for="servings">Number of Servings:</label>
+            <input
+              type="number"
+              id="servings"
+              step="any"
+              value="1"
+              placeholder="1"
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="convert-btn">Convert</button>
+      </form>
+
+      <section class="results-section">
+        <h2>Converted Ingredients</h2>
+        <ul id="result-list" class="result-list"></ul>
+      </section>
+    </main>
+    <script src="receipe.js"></script>
+  </body>
+</html>

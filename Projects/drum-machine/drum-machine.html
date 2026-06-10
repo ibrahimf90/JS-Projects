@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Drum Machine</title>
+    <link rel="stylesheet" href="drum-machine.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        <div id="drum-machine">
+            <a href="../../index.html" class="back-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Projects Hub
+            </a>
+            <header>
+                <h1>DRUM<span>MACHINE</span></h1>
+                <div id="display-container">
+                    <p id="display">READY TO PLAY</p>
+                </div>
+            </header>
+
+            <div id="pad-bank">
+                <!-- Q -->
+                <button class="drum-pad" id="Heater-1">
+                    Q
+                    <audio class="clip" id="Q" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-1.mp3"></audio>
+                </button>
+                <!-- W -->
+                <button class="drum-pad" id="Heater-2">
+                    W
+                    <audio class="clip" id="W" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-2.mp3"></audio>
+                </button>
+                <!-- E -->
+                <button class="drum-pad" id="Heater-3">
+                    E
+                    <audio class="clip" id="E" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-3.mp3"></audio>
+                </button>
+                <!-- A -->
+                <button class="drum-pad" id="Heater-4">
+                    A
+                    <audio class="clip" id="A"
+                        src="https://cdn.freecodecamp.org/curriculum/drum/Heater-4_1.mp3"></audio>
+                </button>
+                <!-- S -->
+                <button class="drum-pad" id="Clap">
+                    S
+                    <audio class="clip" id="S" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-6.mp3"></audio>
+                </button>
+                <!-- D -->
+                <button class="drum-pad" id="Open-HH">
+                    D
+                    <audio class="clip" id="D" src="https://cdn.freecodecamp.org/curriculum/drum/Dsc_Oh.mp3"></audio>
+                </button>
+                <!-- Z -->
+                <button class="drum-pad" id="Kick-n-Hat">
+                    Z
+                    <audio class="clip" id="Z"
+                        src="https://cdn.freecodecamp.org/curriculum/drum/Kick_n_Hat.mp3"></audio>
+                </button>
+                <!-- X -->
+                <button class="drum-pad" id="Kick">
+                    X
+                    <audio class="clip" id="X"
+                        src="https://cdn.freecodecamp.org/curriculum/drum/RP4_KICK_1.mp3"></audio>
+                </button>
+                <!-- C -->
+                <button class="drum-pad" id="Closed-HH">
+                    C
+                    <audio class="clip" id="C" src="https://cdn.freecodecamp.org/curriculum/drum/Cev_H2.mp3"></audio>
+                </button>
+            </div>
+
+            <footer>
+                <p>PRO AUDIO INTERFACE v1.0</p>
+            </footer>
+        </div>
+    </div>
+    <script src="drum-machine.js"></script>
+</body>
+
+</html>

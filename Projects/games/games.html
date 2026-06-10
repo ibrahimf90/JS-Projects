@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arcade Game Hub</title>
+    <meta name="description"
+        content="Play high-fidelity retro games online. Experience Tic-Tac-Toe, Snake, Memory Flip, Speed Car, and Rock Paper Scissors with modern cyberpunk visuals, neon physics, and custom dashboards." />
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="games.css" />
+
+    <!-- External Client Engine -->
+    <script src="games.js" defer></script>
+</head>
+
+<body>
+
+    <!-- APP HEADER -->
+    <header>
+        <div class="header-left">
+            <a href="../../index.html" class="back-hub-btn" title="Back to Projects Hub" id="btn-back-hub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                <span>Back to Projects Hub</span>
+            </a>
+            <div class="logo" id="arcade-logo">ARC<span>ADE</span></div>
+        </div>
+        <nav class="nav-tabs" aria-label="Game Navigation">
+            <button class="nav-tab active" data-view="home" id="nav-tab-home">Home</button>
+            <button class="nav-tab" data-view="ttt" id="nav-tab-ttt">Tic-Tac-Toe</button>
+            <button class="nav-tab" data-view="snake" id="nav-tab-snake">Snake</button>
+            <button class="nav-tab" data-view="memory" id="nav-tab-memory">Memory</button>
+            <button class="nav-tab" data-view="car" id="nav-tab-car">Speed Car</button>
+            <button class="nav-tab" data-view="rps" id="nav-tab-rps">R-P-S</button>
+        </nav>
+        <!-- Dynamic User Callsign Profile widget -->
+        <div class="user-profile" id="header-profile" title="Edit Callsign Profile">
+            <span class="user-avatar" id="profile-avatar">👾</span>
+            <span class="user-name" id="profile-name">GUEST</span>
+        </div>
+    </header>
+
+    <!-- MAIN HUB VIEW -->
+    <main class="view active" id="view-home">
+        <div class="home-hero">
+            <h1>Five Games.<br><em>One Hub.</em></h1>
+            <p id="hub-subtitle">// SELECT YOUR GAME BELOW</p>
+        </div>
+        <section class="game-cards" aria-label="Game Selection Grid">
+            <!-- Tic-Tac-Toe Card -->
+            <div class="game-card ttt" data-goto="ttt" id="card-ttt">
+                <div class="card-icon-wrap">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                        <line x1="9" y1="2" x2="9" y2="26" stroke="#00f5a0" stroke-width="2.2" stroke-linecap="round" />
+                        <line x1="19" y1="2" x2="19" y2="26" stroke="#00f5a0" stroke-width="2.2"
+                            stroke-linecap="round" />
+                        <line x1="2" y1="9" x2="26" y2="9" stroke="#00f5a0" stroke-width="2.2" stroke-linecap="round" />
+                        <line x1="2" y1="19" x2="26" y2="19" stroke="#00f5a0" stroke-width="2.2"
+                            stroke-linecap="round" />
+                        <line x1="4" y1="4" x2="8" y2="8" stroke="#00f5a0" stroke-width="2" stroke-linecap="round" />
+                        <line x1="8" y1="4" x2="4" y2="8" stroke="#00f5a0" stroke-width="2" stroke-linecap="round" />
+                        <circle cx="23" cy="23" r="3" stroke="#a78bfa" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="card-tag">2 PLAYERS</div>
+                <h2 class="card-title">Tic-Tac-Toe</h2>
+                <p class="card-desc">Classic strategic placement. Outsmart your opponent with neon pathing and win three
+                    in a row.</p>
+                <div class="card-play">PLAY NOW</div>
+            </div>
+
+            <!-- Snake Card -->
+            <div class="game-card snake" data-goto="snake" id="card-snake">
+                <div class="card-icon-wrap">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                        <path d="M4 22 Q4 26 8 26 Q24 26 24 18 Q24 10 14 10 Q4 10 4 6 Q4 2 8 2" stroke="#a78bfa"
+                            stroke-width="2.5" stroke-linecap="round" fill="none" />
+                        <circle cx="8" cy="2" r="2.5" fill="#a78bfa" />
+                        <circle cx="9.5" cy="1.2" r="0.9" fill="#07070f" />
+                        <circle cx="6.5" cy="1.2" r="0.9" fill="#07070f" />
+                    </svg>
+                </div>
+                <div class="card-tag">SOLO ARCADE</div>
+                <h2 class="card-title">Snake</h2>
+                <p class="card-desc">Navigate the matrix, absorb golden power cores, trigger kinetic explosions, and
+                    grow longer.</p>
+                <div class="card-play">PLAY NOW</div>
+            </div>
+
+            <!-- Memory Flip Card -->
+            <div class="game-card mem" data-goto="memory" id="card-memory">
+                <div class="card-icon-wrap">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                        <rect x="2" y="2" width="11" height="11" rx="3" fill="rgba(245,158,11,0.2)" stroke="#f59e0b"
+                            stroke-width="1.8" />
+                        <rect x="15" y="2" width="11" height="11" rx="3" fill="#f59e0b" stroke="#f59e0b"
+                            stroke-width="1.8" />
+                        <rect x="2" y="15" width="11" height="11" rx="3" fill="#f59e0b" stroke="#f59e0b"
+                            stroke-width="1.8" />
+                        <rect x="15" y="15" width="11" height="11" rx="3" fill="rgba(245,158,11,0.08)" stroke="#f59e0b"
+                            stroke-width="1.8" stroke-dasharray="3 2" />
+                        <text x="20.5" y="23.5" font-size="7" fill="#f59e0b" text-anchor="middle"
+                            font-family="monospace">?</text>
+                    </svg>
+                </div>
+                <div class="card-tag">MEMORY</div>
+                <h2 class="card-title">Memory Flip</h2>
+                <p class="card-desc">Reveal matching cosmic glyph cards. Perfect your strategy and solve in the fewest
+                    moves.</p>
+                <div class="card-play">PLAY NOW</div>
+            </div>
+
+            <!-- Speed Car Card -->
+            <div class="game-card car" data-goto="car" id="card-car">
+                <div class="card-icon-wrap">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+                        <rect x="8" y="11" width="14" height="12" rx="3" fill="#ef4444" />
+                        <rect x="10" y="6" width="10" height="9" rx="2.5" fill="#b91c1c" />
+                        <rect x="11" y="7" width="8" height="5" rx="1.5" fill="rgba(150,230,255,0.25)" />
+                        <rect x="5.5" y="19" width="4" height="5" rx="1.5" fill="#1e1e30" />
+                        <rect x="20.5" y="19" width="4" height="5" rx="1.5" fill="#1e1e30" />
+                        <rect x="9" y="11" width="3" height="2" rx="1" fill="#fef08a" />
+                        <rect x="18" y="11" width="3" height="2" rx="1" fill="#fef08a" />
+                        <line x1="15" y1="2" x2="15" y2="6" stroke="#f87171" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <line x1="12" y1="3.5" x2="15" y2="6" stroke="#f87171" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <line x1="18" y1="3.5" x2="15" y2="6" stroke="#f87171" stroke-width="1.5"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="card-tag">HIGH SPEED</div>
+                <h2 class="card-title">Speed Car</h2>
+                <p class="card-desc">Rocket-boost across three lanes. Dodge dense highway traffic as speed limits
+                    increase.</p>
+                <div class="card-play">PLAY NOW</div>
+            </div>
+
+            <!-- Rock-Paper-Scissors Card -->
+            <div class="game-card rps" data-goto="rps" id="card-rps">
+                <div class="card-icon-wrap">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true" style="color: var(--accent5);">
+                        <circle cx="8" cy="14" r="5" stroke="currentColor" stroke-width="1.8" />
+                        <rect x="15" y="4" width="10" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8" />
+                        <path d="M15 24 L23 16 M23 24 L15 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="card-tag">VS COMPUTER</div>
+                <h2 class="card-title">Rock Paper Scissors</h2>
+                <p class="card-desc">Cybernetic showdown. Choose your element, outsmart the CPU matrix, and score three points.</p>
+                <div class="card-play">PLAY NOW</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- TIC-TAC-TOE VIEW -->
+    <div class="view" id="view-ttt">
+        <div class="game-wrapper">
+            <div class="game-header">
+                <div class="game-title" id="ttt-header-title">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="color: var(--accent);"
+                        aria-hidden="true">
+                        <line x1="9" y1="2" x2="9" y2="26" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" />
+                        <line x1="19" y1="2" x2="19" y2="26" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" />
+                        <line x1="2" y1="9" x2="26" y2="9" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" />
+                        <line x1="2" y1="19" x2="26" y2="19" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" />
+                    </svg>
+                    Tic-Tac-Toe
+                </div>
+                <div class="score-bar">
+                    <div class="score-pill">X <span id="ttt-x-wins">0</span></div>
+                    <div class="score-pill">Draw <span id="ttt-draws">0</span></div>
+                    <div class="score-pill">O <span id="ttt-o-wins">0</span></div>
+                </div>
+            </div>
+
+            <div class="ttt-scoreboard" aria-label="Detailed Scores">
+                <div class="ttt-score-item x-score">
+                    <div class="label" id="ttt-x-label">PLAYER X</div>
+                    <div class="val" id="ttt-xs">0</div>
+                </div>
+                <div class="ttt-score-item">
+                    <div class="label">DRAWS</div>
+                    <div class="val" id="ttt-ds">0</div>
+                </div>
+                <div class="ttt-score-item o-score">
+                    <div class="label">PLAYER O</div>
+                    <div class="val" id="ttt-os">0</div>
+                </div>
+            </div>
+
+            <div class="status-msg" id="ttt-status">X's turn</div>
+            <div class="ttt-grid" id="ttt-grid" role="grid" aria-label="Tic Tac Toe board"></div>
+
+            <div class="ttt-controls">
+                <button class="btn btn-accent" id="ttt-reset">NEW GAME</button>
+                <button class="btn" id="ttt-reset-scores">RESET SCORES</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SNAKE VIEW -->
+    <div class="view" id="view-snake">
+        <div class="game-wrapper">
+            <div class="game-header">
+                <div class="game-title" style="color: #a78bfa;">
+                    <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" aria-hidden="true">
+                        <path d="M4 22 Q4 26 8 26 Q24 26 24 18 Q24 10 14 10 Q4 10 4 6 Q4 2 8 2" fill="none" />
+                        <circle cx="8" cy="2" r="2.5" fill="currentColor" stroke="none" />
+                    </svg>
+                    Snake
+                </div>
+                <div class="score-bar">
+                    <div class="score-pill">Score <span id="snake-score">0</span></div>
+                    <div class="score-pill">Best <span id="snake-best">0</span></div>
+                </div>
+            </div>
+
+            <div class="status-msg" id="snake-status">Press START or Space to begin</div>
+
+            <!-- Canvas bezel HUD container -->
+            <div class="snake-hud-container">
+                <canvas id="snake-canvas" width="340" height="340"></canvas>
+            </div>
+
+            <div class="snake-controls">
+                <button class="btn btn-accent" id="snake-start">START GAME</button>
+                <button class="btn" id="snake-pause">PAUSE</button>
+            </div>
+
+            <!-- Dynamic D-Pad controls -->
+            <div class="dpad" aria-label="Onscreen Controller D-Pad">
+                <button class="dpad-btn up" data-dir="UP" aria-label="Move Up">▲</button>
+                <button class="dpad-btn left" data-dir="LEFT" aria-label="Move Left">◀</button>
+                <button class="dpad-btn right" data-dir="RIGHT" aria-label="Move Right">▶</button>
+                <button class="dpad-btn down" data-dir="DOWN" aria-label="Move Down">▼</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEMORY VIEW -->
+    <div class="view" id="view-memory">
+        <div class="game-wrapper">
+            <div class="game-header">
+                <div class="game-title" style="color: var(--accent3);">
+                    <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8"
+                        aria-hidden="true">
+                        <rect x="2" y="2" width="11" height="11" rx="3" />
+                        <rect x="15" y="2" width="11" height="11" rx="3" fill="currentColor" />
+                        <rect x="2" y="15" width="11" height="11" rx="3" fill="currentColor" />
+                        <rect x="15" y="15" width="11" height="11" rx="3" />
+                    </svg>
+                    Memory Flip
+                </div>
+                <div class="score-bar">
+                    <div class="score-pill">Moves <span id="mem-moves">0</span></div>
+                    <div class="score-pill">Pairs <span id="mem-pairs">0</span>/8</div>
+                </div>
+            </div>
+
+            <div class="status-msg" id="mem-status">Flip cards to match the pairs</div>
+            <div class="mem-grid" id="mem-grid" role="grid" aria-label="Memory grid card board"></div>
+
+            <div class="mem-controls">
+                <button class="btn btn-accent" id="mem-reset">NEW GAME</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SPEED CAR VIEW -->
+    <div class="view" id="view-car">
+        <div class="game-wrapper">
+            <div class="game-header">
+                <div class="game-title" style="color: var(--accent4);">
+                    <svg width="28" height="28" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+                        <rect x="8" y="11" width="14" height="12" rx="3" fill="currentColor" />
+                        <rect x="10" y="6" width="10" height="9" rx="2.5" fill="#b91c1c" />
+                        <rect x="11" y="7" width="8" height="5" rx="1.5" fill="rgba(150,230,255,0.2)" />
+                        <rect x="5.5" y="19" width="4" height="5" rx="1.5" fill="#1e1e30" />
+                        <rect x="20.5" y="19" width="4" height="5" rx="1.5" fill="#1e1e30" />
+                        <rect x="9" y="11" width="3" height="2" rx="1" fill="#fef08a" />
+                        <rect x="18" y="11" width="3" height="2" rx="1" fill="#fef08a" />
+                    </svg>
+                    Speed Car
+                </div>
+                <div class="score-bar">
+                    <div class="score-pill">Score <span id="car-score">0</span></div>
+                    <div class="score-pill">Best <span id="car-best">0</span></div>
+                    <div class="score-pill">Speed <span id="car-speed">1</span>x</div>
+                </div>
+            </div>
+
+            <div class="status-msg" id="car-status">Press START or Space to begin</div>
+
+            <!-- Canvas bezel HUD container -->
+            <div class="car-hud-container">
+                <canvas id="car-canvas" width="340" height="480"></canvas>
+            </div>
+
+            <div class="car-btns">
+                <button class="btn btn-accent" id="car-start">START ENGINE</button>
+                <button class="btn" id="car-pause">PAUSE</button>
+            </div>
+
+            <div class="steer-btns" aria-label="Steering controls">
+                <button class="steer-btn" id="car-left" aria-label="Steer Left">◀ STEER LEFT</button>
+                <button class="steer-btn" id="car-right" aria-label="Steer Right">STEER RIGHT ▶</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ROCK-PAPER-SCISSORS VIEW -->
+    <div class="view" id="view-rps">
+        <div class="game-wrapper">
+            <div class="game-header">
+                <div class="game-title" style="color: var(--accent5);">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <circle cx="8" cy="14" r="5" />
+                        <rect x="15" y="4" width="10" height="8" rx="1.5" />
+                        <path d="M15 24 L23 16 M23 24 L15 16" stroke-linecap="round" />
+                    </svg>
+                    Rock-Paper-Scissors
+                </div>
+                <div class="score-bar">
+                    <div class="score-pill">Best of 3 wins</div>
+                </div>
+            </div>
+
+            <div class="ttt-scoreboard" aria-label="Detailed Scores">
+                <div class="ttt-score-item x-score" style="border-color: rgba(0, 240, 255, 0.2);">
+                    <div class="label" id="rps-player-label">PLAYER</div>
+                    <div class="val" id="rps-player-score" style="color: var(--accent5);">0</div>
+                </div>
+                <div class="ttt-score-item o-score">
+                    <div class="label">COMPUTER</div>
+                    <div class="val" id="rps-computer-score">0</div>
+                </div>
+            </div>
+
+            <div class="status-msg" id="rps-status">Choose your weapon to start the match</div>
+
+            <div class="rps-battlefield">
+                <div class="rps-fighter player">
+                    <div class="fighter-title">YOU</div>
+                    <div class="fighter-card" id="rps-player-card">
+                        <span class="fighter-emoji" id="rps-player-choice">❓</span>
+                    </div>
+                </div>
+                <div class="rps-vs">VS</div>
+                <div class="rps-fighter computer">
+                    <div class="fighter-title">CPU</div>
+                    <div class="fighter-card" id="rps-computer-card">
+                        <span class="fighter-emoji" id="rps-computer-choice">❓</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rps-controls-container">
+                <div class="rps-btn-group">
+                    <button class="rps-choice-btn" id="rps-rock-btn" data-choice="Rock" aria-label="Choose Rock">
+                        <span class="choice-emoji">🪨</span>
+                        <span class="choice-label">ROCK</span>
+                    </button>
+                    <button class="rps-choice-btn" id="rps-paper-btn" data-choice="Paper" aria-label="Choose Paper">
+                        <span class="choice-emoji">📄</span>
+                        <span class="choice-label">PAPER</span>
+                    </button>
+                    <button class="rps-choice-btn" id="rps-scissors-btn" data-choice="Scissors" aria-label="Choose Scissors">
+                        <span class="choice-emoji">✂️</span>
+                        <span class="choice-label">SCISSORS</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sleek Cyber Accordion for Rules -->
+            <details class="rps-rules-details">
+                <summary class="rps-rules-summary">🛡️ Game Rules Telemetry</summary>
+                <div class="rps-rules-content">
+                    <p>Combat matches are computed against the central CPU mainframe. First combatant to reach <strong>3 points</strong> wins the telemetry sector.</p>
+                    <ul class="rps-rules-list">
+                        <li><span>🪨</span> Rock crushes Scissors</li>
+                        <li><span>✂️</span> Scissors shred Paper</li>
+                        <li><span>📄</span> Paper covers Rock</li>
+                    </ul>
+                    <p class="rps-rules-footer">Equivalent elements trigger a tie circuit (no point allocated).</p>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <!-- DIALOG LAYOUT SYSTEM -->
+    <!-- Player Callsign Startup Dialog -->
+    <dialog id="dialog-username" aria-labelledby="dialog-username-title">
+        <h2 id="dialog-username-title">👾 INITIALIZE PROFILE</h2>
+        <div class="avatar-selection" id="avatar-selector">
+            <span class="avatar-opt active" data-avatar="👾">👾</span>
+            <span class="avatar-opt" data-avatar="🚀">🚀</span>
+            <span class="avatar-opt" data-avatar="🛸">🛸</span>
+            <span class="avatar-opt" data-avatar="⚡">⚡</span>
+            <span class="avatar-opt" data-avatar="🎯">🎯</span>
+        </div>
+        <p>Please enter your callsign callsign to sync local game progression telemetry.</p>
+        <div class="input-wrap">
+            <input type="text" id="username-input" placeholder="ENTER PLAYER CALLSIGN..." maxlength="12"
+                autocomplete="off" />
+        </div>
+        <div class="dialog-btns">
+            <button class="btn btn-accent" id="username-submit">INITIALIZE</button>
+        </div>
+    </dialog>
+
+    <!-- Tic Tac Toe Game Over -->
+    <dialog id="dialog-ttt" aria-labelledby="dialog-ttt-title">
+        <h2 id="dialog-ttt-title">Round Concluded</h2>
+        <div class="big-score" id="dialog-ttt-emoji">🎉</div>
+        <p id="dialog-ttt-msg">Player X wins!</p>
+        <div class="dialog-btns">
+            <button class="btn" id="dialog-ttt-close">CLOSE GAME</button>
+            <button class="btn btn-accent" id="dialog-ttt-next">NEXT ROUND</button>
+        </div>
+    </dialog>
+
+    <!-- Snake Game Over -->
+    <dialog id="dialog-snake" aria-labelledby="dialog-snake-title">
+        <h2 id="dialog-snake-title">Game Over</h2>
+        <div class="big-score" id="dialog-snake-score">0</div>
+        <p id="dialog-snake-msg">Your snake ran into trouble.</p>
+        <div class="dialog-btns">
+            <button class="btn" id="dialog-snake-close">CLOSE GAME</button>
+            <button class="btn btn-accent" id="dialog-snake-retry">PLAY AGAIN</button>
+        </div>
+    </dialog>
+
+    <!-- Memory Game Complete -->
+    <dialog id="dialog-memory" aria-labelledby="dialog-mem-title">
+        <h2 id="dialog-mem-title">🎉 Puzzle Complete!</h2>
+        <div class="big-score" id="dialog-mem-moves">0</div>
+        <p id="dialog-mem-msg">You matched all pairs!</p>
+        <div class="dialog-btns">
+            <button class="btn" id="dialog-mem-close">CLOSE GAME</button>
+            <button class="btn btn-accent" id="dialog-mem-play">PLAY AGAIN</button>
+        </div>
+    </dialog>
+
+    <!-- Speed Car Crash -->
+    <dialog id="dialog-car" aria-labelledby="dialog-car-title">
+        <h2 id="dialog-car-title">💥 Crash Impact!</h2>
+        <div class="big-score" id="dialog-car-score">0</div>
+        <p id="dialog-car-msg">You were taken out by highway traffic.</p>
+        <div class="dialog-btns">
+            <button class="btn" id="dialog-car-close">CLOSE GAME</button>
+            <button class="btn btn-accent" id="dialog-car-retry">PLAY AGAIN</button>
+        </div>
+    </dialog>
+
+    <!-- Rock Paper Scissors Game Over -->
+    <dialog id="dialog-rps" aria-labelledby="dialog-rps-title">
+        <h2 id="dialog-rps-title">Match Concluded</h2>
+        <div class="big-score" id="dialog-rps-emoji">🏆</div>
+        <p id="dialog-rps-msg">Player wins!</p>
+        <div class="dialog-btns">
+            <button class="btn" id="dialog-rps-close">CLOSE GAME</button>
+            <button class="btn btn-accent" id="dialog-rps-retry" style="background: linear-gradient(135deg, var(--accent5), #00b0ff); border-color: var(--accent5); box-shadow: 0 0 15px rgba(0, 240, 255, 0.15); color: #010104;">PLAY AGAIN</button>
+        </div>
+    </dialog>
+
+</body>
+
+</html>

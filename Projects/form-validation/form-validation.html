@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Complaint Form</title>
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Style -->
+    <link rel="stylesheet" href="form-validation.css" />
+  </head>
+
+  <body>
+    <!-- Premium Navigation Header -->
+    <header class="navbar-top">
+      <a href="../../index.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Projects Hub</span>
+      </a>
+      <div class="explorer-logo">
+        <i class="fa-solid fa-headset"></i>COMPLAINT<span>.DEV</span>
+      </div>
+    </header>
+
+    <div class="support-container">
+      <!-- Professional Helpdesk Banner -->
+      <div class="support-header">
+        <div class="header-badge">Customer Support</div>
+        <h1>Customer Complaint Form</h1>
+        <p class="subtitle">
+          A premium creative web project developed by IBRAHIM.DEV utilizing
+          clean JavaScript logic, responsive styling, and high-fidelity UI
+          design.
+        </p>
+      </div>
+
+      <form id="form" novalidate>
+        <div class="form-grid">
+          <!-- Left Column: User & Product Details -->
+          <div class="form-column">
+            <!-- Section: Personal Info -->
+            <div
+              class="form-card"
+              id="personal-info"
+              role="group"
+              aria-labelledby="title-personal-info"
+            >
+              <div class="card-header">
+                <i class="fa-solid fa-user-tie"></i>
+                <h3 id="title-personal-info">Personal Details</h3>
+              </div>
+
+              <div class="input-group" id="group-full-name">
+                <label for="full-name">Full Name</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input
+                    type="text"
+                    id="full-name"
+                    name="full-name"
+                    placeholder="John Doe"
+                  />
+                  <i class="fa-solid fa-circle-check status-icon success"></i>
+                  <i
+                    class="fa-solid fa-circle-exclamation status-icon error"
+                  ></i>
+                </div>
+                <span class="error-msg" id="err-full-name"
+                  >Full name is required.</span
+                >
+              </div>
+
+              <div class="input-group" id="group-email">
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-envelope input-icon"></i>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@domain.com"
+                  />
+                  <i class="fa-solid fa-circle-check status-icon success"></i>
+                  <i
+                    class="fa-solid fa-circle-exclamation status-icon error"
+                  ></i>
+                </div>
+                <span class="error-msg" id="err-email"
+                  >Enter a valid email address.</span
+                >
+              </div>
+            </div>
+
+            <!-- Section: Product Info -->
+            <div
+              class="form-card"
+              id="product-info"
+              role="group"
+              aria-labelledby="title-product-info"
+            >
+              <div class="card-header">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <h3 id="title-product-info">Order & Product Details</h3>
+              </div>
+
+              <div class="input-group" id="group-order-no">
+                <label for="order-no">Order Number</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-hashtag input-icon"></i>
+                  <input
+                    type="text"
+                    id="order-no"
+                    name="order-no"
+                    placeholder="2024######"
+                  />
+                  <i class="fa-solid fa-circle-check status-icon success"></i>
+                  <i
+                    class="fa-solid fa-circle-exclamation status-icon error"
+                  ></i>
+                </div>
+                <span class="error-msg" id="err-order-no"
+                  >Must be 10 digits starting with 2024.</span
+                >
+              </div>
+
+              <div class="input-group" id="group-product-code">
+                <label for="product-code">Product Code</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-barcode input-icon"></i>
+                  <input
+                    type="text"
+                    id="product-code"
+                    name="product-code"
+                    placeholder="XX##-X###-XX#"
+                  />
+                  <i class="fa-solid fa-circle-check status-icon success"></i>
+                  <i
+                    class="fa-solid fa-circle-exclamation status-icon error"
+                  ></i>
+                </div>
+                <span class="error-msg" id="err-product-code"
+                  >Format must match: XX##-X###-XX#</span
+                >
+              </div>
+
+              <div class="input-group" id="group-quantity">
+                <label for="quantity">Quantity</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-cubes input-icon"></i>
+                  <input
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    min="1"
+                    placeholder="1"
+                  />
+                  <i class="fa-solid fa-circle-check status-icon success"></i>
+                  <i
+                    class="fa-solid fa-circle-exclamation status-icon error"
+                  ></i>
+                </div>
+                <span class="error-msg" id="err-quantity"
+                  >Enter a valid quantity (1 or more).</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Complaint Details & Actions -->
+          <div class="form-column">
+            <!-- Section: Complaint Reason -->
+            <div
+              class="form-card"
+              id="complaints-group"
+              role="group"
+              aria-labelledby="title-complaints-group"
+            >
+              <div class="card-header">
+                <i class="fa-solid fa-circle-question"></i>
+                <h3 id="title-complaints-group">Complaint Reason</h3>
+              </div>
+              <p class="section-instruction">
+                Select all reasons that apply to your complaint:
+              </p>
+
+              <div class="checkbox-options">
+                <label class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="damaged-product"
+                    name="complaint"
+                    value="damaged-product"
+                  />
+                  <span class="checkmark"></span>
+                  <span class="label-text">Damaged Product</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="nonconforming-product"
+                    name="complaint"
+                    value="nonconforming-product"
+                  />
+                  <span class="checkmark"></span>
+                  <span class="label-text">Nonconforming Product</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="delayed-dispatch"
+                    name="complaint"
+                    value="delayed-dispatch"
+                  />
+                  <span class="checkmark"></span>
+                  <span class="label-text">Delayed Dispatch</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="other-complaint"
+                    name="complaint"
+                    value="other"
+                  />
+                  <span class="checkmark"></span>
+                  <span class="label-text"
+                    >Other Reason (Requires description)</span
+                  >
+                </label>
+              </div>
+              <span class="error-msg" id="err-complaints-group"
+                >Please select at least one reason.</span
+              >
+
+              <div class="textarea-group" id="complaint-description-container">
+                <label for="complaint-description"
+                  >Description of Complaint Reason</label
+                >
+                <textarea
+                  placeholder="Describe the reason of your complaint in at least 20 characters..."
+                  name="complaint-textarea"
+                  id="complaint-description"
+                ></textarea>
+                <span class="error-msg" id="err-complaint-description"
+                  >Description is required (minimum 20 characters).</span
+                >
+              </div>
+            </div>
+
+            <!-- Section: Desired Solution -->
+            <div
+              class="form-card"
+              id="solutions-group"
+              role="group"
+              aria-labelledby="title-solutions-group"
+            >
+              <div class="card-header">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3 id="title-solutions-group">Desired Solution</h3>
+              </div>
+              <p class="section-instruction">
+                Select your preferred resolution path:
+              </p>
+
+              <div class="radio-options">
+                <label class="custom-radio">
+                  <input
+                    type="radio"
+                    name="solutions"
+                    id="refund"
+                    value="refund"
+                  />
+                  <span class="radio-dot"></span>
+                  <span class="label-text">Refund</span>
+                </label>
+
+                <label class="custom-radio">
+                  <input
+                    type="radio"
+                    name="solutions"
+                    id="exchange"
+                    value="exchange"
+                  />
+                  <span class="radio-dot"></span>
+                  <span class="label-text">Exchange</span>
+                </label>
+
+                <label class="custom-radio">
+                  <input
+                    type="radio"
+                    name="solutions"
+                    id="other-solution"
+                    value="other"
+                  />
+                  <span class="radio-dot"></span>
+                  <span class="label-text"
+                    >Other Desired Solution (Requires description)</span
+                  >
+                </label>
+              </div>
+              <span class="error-msg" id="err-solutions-group"
+                >Please select a desired solution.</span
+              >
+
+              <div class="textarea-group" id="solution-description-container">
+                <label for="solution-description"
+                  >Description of Desired Solution</label
+                >
+                <textarea
+                  placeholder="Describe the desired solution to your issue in at least 20 characters..."
+                  name="solution-textarea"
+                  id="solution-description"
+                ></textarea>
+                <span class="error-msg" id="err-solution-description"
+                  >Description of desired solution is required (minimum 20
+                  characters).</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Footer -->
+        <div class="form-footer">
+          <div class="alert-box-container">
+            <div id="message-box" role="alert" aria-live="polite"></div>
+          </div>
+          <div class="action-buttons">
+            <button type="button" id="clear-btn" class="btn btn-secondary">
+              <i class="fa-solid fa-rotate-left"></i> Clear
+            </button>
+            <button type="submit" id="submit-btn" class="btn btn-primary">
+              <i class="fa-solid fa-circle-check"></i> Submit Complaint
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Script -->
+    <script src="form-validation.js"></script>
+  </body>
+</html>

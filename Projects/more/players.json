@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Neymar Jr",
+    "position": "Forward",
+    "image": "https://ui-avatars.com/api/?name=Neymar+Jr&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Brazilian forward known for his exceptional dribbling skills and playmaking ability. A key player for Brazil in international competitions.",
+    "goals": 79,
+    "caps": 128
+  },
+  {
+    "name": "Vinícius Jr",
+    "position": "Forward",
+    "image": "https://ui-avatars.com/api/?name=Vinicius+Jr&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Explosive winger with incredible pace and technical ability. Rising star who has become one of Brazil's most important attacking threats.",
+    "goals": 24,
+    "caps": 45
+  },
+  {
+    "name": "Rodrygo",
+    "position": "Forward",
+    "image": "https://ui-avatars.com/api/?name=Rodrygo&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Versatile forward capable of playing on either wing or as an attacking midfielder. Known for his intelligent movement and finishing.",
+    "goals": 8,
+    "caps": 28
+  },
+  {
+    "name": "Raphinha",
+    "position": "Forward",
+    "image": "https://ui-avatars.com/api/?name=Raphinha&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Skillful winger with excellent crossing ability and set-piece expertise. Provides creativity and width to Brazil's attack.",
+    "goals": 7,
+    "caps": 22
+  },
+  {
+    "name": "Casemiro",
+    "position": "Midfielder",
+    "image": "https://ui-avatars.com/api/?name=Casemiro&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Defensive midfielder known for his tactical intelligence, ball-winning ability, and leadership. The engine room of Brazil's midfield.",
+    "goals": 7,
+    "caps": 75
+  },
+  {
+    "name": "Lucas Paquetá",
+    "position": "Midfielder",
+    "image": "https://ui-avatars.com/api/?name=Lucas+Paqueta&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Creative midfielder with excellent vision and technical skills. Capable of playing in multiple midfield roles.",
+    "goals": 4,
+    "caps": 35
+  },
+  {
+    "name": "Bruno Guimarães",
+    "position": "Midfielder",
+    "image": "https://ui-avatars.com/api/?name=Bruno+Guimaraes&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Box-to-box midfielder with great energy and passing range. Adds dynamism and control to Brazil's midfield.",
+    "goals": 2,
+    "caps": 20
+  },
+  {
+    "name": "Marquinhos",
+    "position": "Defender",
+    "image": "https://ui-avatars.com/api/?name=Marquinhos&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Versatile defender who can play center-back or right-back. Known for his leadership, aerial ability, and tactical awareness.",
+    "goals": 5,
+    "caps": 85
+  },
+  {
+    "name": "Thiago Silva",
+    "position": "Defender",
+    "image": "https://ui-avatars.com/api/?name=Thiago+Silva&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Experienced center-back with exceptional positioning and reading of the game. Veteran leader in Brazil's defense.",
+    "goals": 3,
+    "caps": 115
+  },
+  {
+    "name": "Éder Militão",
+    "position": "Defender",
+    "image": "https://ui-avatars.com/api/?name=Eder+Miltao&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Strong and athletic defender comfortable in both center-back and right-back positions. Excellent in aerial duels.",
+    "goals": 2,
+    "caps": 35
+  },
+  {
+    "name": "Alisson",
+    "position": "Goalkeeper",
+    "image": "https://ui-avatars.com/api/?name=Alisson&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "World-class goalkeeper known for his shot-stopping ability and distribution. One of the best keepers in world football.",
+    "goals": 0,
+    "caps": 65
+  },
+  {
+    "name": "Ederson",
+    "position": "Goalkeeper",
+    "image": "https://ui-avatars.com/api/?name=Ederson&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Goalkeeper with exceptional distribution and long-range passing. Known for his ability to start attacks from the back.",
+    "goals": 0,
+    "caps": 25
+  },
+  {
+    "name": "Gabriel Martinelli",
+    "position": "Forward",
+    "image": "https://ui-avatars.com/api/?name=Gabriel+Martinelli&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Young and energetic forward with great dribbling skills. Rising talent who brings pace and directness to Brazil's attack.",
+    "goals": 3,
+    "caps": 15
+  },
+  {
+    "name": "Gabriel Jesus",
+    "position": "Forward",
+    "image": "https://ui-avatars.com/api/?name=Gabriel+Jesus&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Hardworking forward with excellent pressing and movement. Versatile attacker who can play across the front line.",
+    "goals": 22,
+    "caps": 55
+  },
+  {
+    "name": "Bremer",
+    "position": "Defender",
+    "image": "https://ui-avatars.com/api/?name=Bremer&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Strong center-back with excellent defensive positioning. Emerging talent in Brazil's defensive options.",
+    "goals": 1,
+    "caps": 8
+  },
+  {
+    "name": "Danilo",
+    "position": "Defender",
+    "image": "https://ui-avatars.com/api/?name=Danilo&background=009c3b&color=fff&size=200&font-size=0.33",
+    "bio": "Versatile full-back capable of playing on both sides. Experienced defender with good crossing ability.",
+    "goals": 2,
+    "caps": 45
+  }
+]

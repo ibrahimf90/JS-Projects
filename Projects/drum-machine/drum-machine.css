@@ -1,0 +1,192 @@
+:root {
+    --bg-color: #050505;
+    --machine-bg: #121214;
+    --pad-bg: #1e1e22;
+    --pad-hover: #2a2a2e;
+    --accent-primary: #00f2ff;
+    --accent-secondary: #7000ff;
+    --text-primary: #ffffff;
+    --text-secondary: #88888b;
+    --display-bg: #000000;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(112, 0, 255, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(0, 242, 255, 0.15) 0%, transparent 40%);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding: 10px 0;
+}
+
+#root {
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+}
+
+#drum-machine {
+    background-color: var(--machine-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 var(--glass-border);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.back-btn:hover {
+    color: var(--accent-primary);
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    transform: translateX(-5px);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: var(--text-secondary);
+}
+
+header h1 span {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+#display-container {
+    background: var(--display-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#display-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+}
+
+#display {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+#pad-bank {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.drum-pad {
+    background: var(--pad-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    user-select: none;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.drum-pad:hover {
+    background: var(--pad-hover);
+    border-color: var(--text-secondary);
+    transform: translateY(-2px);
+}
+
+.drum-pad:active, .drum-pad.active {
+    background: var(--accent-secondary);
+    border-color: var(--accent-primary);
+    transform: translateY(2px);
+    box-shadow: 0 0 20px rgba(112, 0, 255, 0.6);
+    color: #fff;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 480px) {
+    #drum-machine {
+        padding: 20px;
+    }
+    .drum-pad {
+        height: 80px;
+        font-size: 1.2rem;
+    }
+}

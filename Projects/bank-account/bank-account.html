@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bank | Secure Asset Management</title>
+    <link rel="stylesheet" href="bank-account.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <a href="../../index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+            </svg>
+            Back to Projects Hub
+        </a>
+
+        <header>
+            <h1>My Bank</h1>
+            <p>Smart Management for Modern Assets</p>
+        </header>
+
+        <main class="dashboard">
+            <!-- Balance Card -->
+            <section class="card balance-card">
+                <div class="balance-info">
+                    <h2>Total Balance</h2>
+                    <div id="balanceDisplay" class="balance-amount">$0.00</div>
+                </div>
+                <div class="status-indicator">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                        <path d="m9 12 2 2 4-4" />
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Actions Card -->
+            <section class="card actions">
+                <h3>Transactions</h3>
+                <div class="input-group">
+                    <label for="amountInput">Enter Amount</label>
+                    <div class="input-wrapper">
+                        <span>$</span>
+                        <input type="number" id="amountInput" placeholder="0.00" min="0" step="0.01" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="descInput">Description</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="descInput" placeholder="e.g. Salary, Rent, Coffee"
+                            style="padding-left: 1rem;" required>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button id="depositBtn" class="btn-deposit">Deposit</button>
+                    <button id="withdrawBtn" class="btn-withdraw">Withdraw</button>
+                </div>
+
+                <div id="statusMsg"></div>
+            </section>
+
+            <!-- History Card -->
+            <section class="card history">
+                <div class="history-header">
+                    <h3>Recent Activity</h3>
+                    <div id="transactionCount" style="font-size: 0.75rem; color: var(--text-muted);">0 Transactions
+                    </div>
+                </div>
+                <ul id="historyList" class="history-list">
+                    <!-- Transactions will be injected here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="bank-account.js"></script>
+</body>
+
+</html>

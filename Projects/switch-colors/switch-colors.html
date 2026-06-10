@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery & Theme Switcher</title>
+  <meta name="description" content="A premium photo gallery with dynamic theme switching and lightbox viewer.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Outfit:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="switch-colors.css">
+</head>
+
+<body class="theme-night">
+  <div class="bg-blur"></div>
+
+  <header>
+    <div class="container">
+      <a href="../../index.html" class="back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to Projects Hub
+      </a>
+      <div class="header-top">
+        <h1 class="title">Gallery<span> & Switcher</span></h1>
+
+        <div class="switcher-wrap">
+          <button id="theme-switcher-button" aria-haspopup="true" aria-expanded="false" aria-controls="theme-dropdown">
+            <span id="current-theme-label">Switch Theme</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+
+          <ul id="theme-dropdown" role="menu" aria-labelledby="theme-switcher-button" hidden>
+            <li role="menuitem" id="theme-night" data-theme="night">
+              <span class="swatch night"></span> Night
+            </li>
+            <li role="menuitem" id="theme-light" data-theme="light">
+              <span class="swatch light"></span> Light
+            </li>
+            <li role="menuitem" id="theme-adventure" data-theme="adventure">
+              <span class="swatch adventure"></span> Adventure
+            </li>
+            <li role="menuitem" id="theme-sunset" data-theme="sunset">
+              <span class="swatch sunset"></span> Sunset
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="subtitle">Experience art in your preferred atmosphere</p>
+      <div aria-live="polite" id="status">Night mode is on. Rest your eyes.</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="gallery">
+      <!-- Row 1 -->
+      <div class="gallery-card">
+        <img class="gallery-item" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=400&q=80"
+          alt="Alpine Lake" data-full="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=80">
+        <div class="item-overlay">
+          <span>Alpine Lake</span>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img class="gallery-item" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80" alt="Mountain Range"
+          data-full="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80">
+        <div class="item-overlay">
+          <span>Mountain Range</span>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img class="gallery-item" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=400&q=80" alt="Mystic Forest"
+          data-full="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80">
+        <div class="item-overlay">
+          <span>Mystic Forest</span>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="gallery-card">
+        <img class="gallery-item" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=400&q=80" alt="Snowy Peaks"
+          data-full="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80">
+        <div class="item-overlay">
+          <span>Snowy Peaks</span>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img class="gallery-item" src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=400&q=80" alt="Golden Desert"
+          data-full="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=1600&q=80">
+        <div class="item-overlay">
+          <span>Golden Desert</span>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img class="gallery-item" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Tropical Coast"
+          data-full="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80">
+        <div class="item-overlay">
+          <span>Tropical Coast</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="nav-btn" id="prev-btn" aria-label="Previous image">&lt;</button>
+    <button class="nav-btn" id="next-btn" aria-label="Next image">&gt;</button>
+    <div class="lightbox-content">
+      <button id="close-btn" aria-label="Close Lightbox">&times;</button>
+      <div class="image-container">
+        <img id="lightbox-image" src="" alt="Full size image">
+      </div>
+    </div>
+  </div>
+
+  <script src="switch-colors.js"></script>
+</body>
+
+</html>

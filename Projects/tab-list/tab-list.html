@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planet Facts Dashboard</title>
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Style -->
+    <link rel="stylesheet" href="tab-list.css" />
+  </head>
+
+  <body>
+    <!-- Cosmic background effects -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="nebula"></div>
+
+    <!-- Navigation Header -->
+    <div class="navbar-top">
+      <a href="../../index.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Projects Hub</span>
+      </a>
+      <div class="explorer-logo">
+        <i class="fa-solid fa-user-astronaut"></i>PLANET<span>.DEV</span>
+      </div>
+    </div>
+
+    <div class="explorer-container">
+      <header class="explorer-header">
+        <h1>Planet Facts Dashboard</h1>
+        <p class="subtitle">
+          A premium creative web project developed by IBRAHIM.DEV utilizing
+          clean JavaScript logic, responsive styling, and high-fidelity UI
+          design.
+        </p>
+      </header>
+
+      <div class="tabs-wrapper">
+        <!-- Sidebar Navigation (Tabs list) -->
+        <div
+          class="sidebar-tabs"
+          role="tablist"
+          aria-label="Solar System Planets"
+        >
+          <button
+            role="tab"
+            aria-controls="panel-sun"
+            aria-selected="true"
+            id="tab-sun"
+            class="planet-tab active"
+            data-planet="sun"
+          >
+            <span class="planet-dot sun-dot"></span>
+            <span class="planet-name">The Sun</span>
+          </button>
+          <button
+            role="tab"
+            aria-controls="panel-mercury"
+            aria-selected="false"
+            id="tab-mercury"
+            class="planet-tab"
+            data-planet="mercury"
+          >
+            <span class="planet-dot mercury-dot"></span>
+            <span class="planet-name">Mercury</span>
+          </button>
+          <button
+            role="tab"
+            aria-controls="panel-venus"
+            aria-selected="false"
+            id="tab-venus"
+            class="planet-tab"
+            data-planet="venus"
+          >
+            <span class="planet-dot venus-dot"></span>
+            <span class="planet-name">Venus</span>
+          </button>
+          <button
+            role="tab"
+            aria-controls="panel-earth"
+            aria-selected="false"
+            id="tab-earth"
+            class="planet-tab"
+            data-planet="earth"
+          >
+            <span class="planet-dot earth-dot"></span>
+            <span class="planet-name">Earth</span>
+          </button>
+          <button
+            role="tab"
+            aria-controls="panel-mars"
+            aria-selected="false"
+            id="tab-mars"
+            class="planet-tab"
+            data-planet="mars"
+          >
+            <span class="planet-dot mars-dot"></span>
+            <span class="planet-name">Mars</span>
+          </button>
+          <button
+            role="tab"
+            aria-controls="panel-jupiter"
+            aria-selected="false"
+            id="tab-jupiter"
+            class="planet-tab"
+            data-planet="jupiter"
+          >
+            <span class="planet-dot jupiter-dot"></span>
+            <span class="planet-name">Jupiter</span>
+          </button>
+          <button
+            role="tab"
+            aria-controls="panel-saturn"
+            aria-selected="false"
+            id="tab-saturn"
+            class="planet-tab"
+            data-planet="saturn"
+          >
+            <span class="planet-dot saturn-dot"></span>
+            <span class="planet-name">Saturn</span>
+          </button>
+          <button
+            role="tab"
+            aria-controls="panel-uranus"
+            aria-selected="false"
+            id="tab-uranus"
+            class="planet-tab"
+            data-planet="uranus"
+          >
+            <span class="planet-dot uranus-dot"></span>
+            <span class="planet-name">Uranus</span>
+          </button>
+          <button
+            role="tab"
+            aria-controls="panel-neptune"
+            aria-selected="false"
+            id="tab-neptune"
+            class="planet-tab"
+            data-planet="neptune"
+          >
+            <span class="planet-dot neptune-dot"></span>
+            <span class="planet-name">Neptune</span>
+          </button>
+          <button
+            role="tab"
+            aria-controls="panel-pluto"
+            aria-selected="false"
+            id="tab-pluto"
+            class="planet-tab"
+            data-planet="pluto"
+          >
+            <span class="planet-dot pluto-dot"></span>
+            <span class="planet-name">Pluto</span>
+          </button>
+        </div>
+
+        <!-- Main Display Panel Area -->
+        <div class="display-panel">
+          <!-- SUN PANEL -->
+          <div
+            id="panel-sun"
+            role="tabpanel"
+            aria-labelledby="tab-sun"
+            class="tabpanel-content"
+          >
+            <div class="planet-layout">
+              <div class="planet-visual">
+                <div class="sphere-wrapper">
+                  <div class="planet-sphere sun-sphere"></div>
+                  <div class="planet-shadow"></div>
+                </div>
+              </div>
+              <div class="planet-info">
+                <span class="planet-tag">Yellow Dwarf Star</span>
+                <h2 class="planet-title">The Sun</h2>
+                <p class="planet-desc">
+                  The Sun is the heart of our solar system, a nearly perfect
+                  sphere of hot plasma heated to incandescence by nuclear fusion
+                  reactions in its core. It accounts for 99.86% of the total
+                  mass of the entire solar system.
+                </p>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                      ></i>
+                      Diameter</span
+                    >
+                    <span class="stat-value">1,392,700 km</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-ruler-horizontal"></i> Distance
+                      from Sun</span
+                    >
+                    <span class="stat-value">0.00 AU (Center)</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-rotate"></i> Day Length</span
+                    >
+                    <span class="stat-value">27 Earth Days</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-circle-notch"></i> Year
+                      Length</span
+                    >
+                    <span class="stat-value">230 Million Years</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-temperature-half"></i> Avg
+                      Temp</span
+                    >
+                    <span class="stat-value">5,500°C (Surface)</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-circle"></i> Orbiting Bodies</span
+                    >
+                    <span class="stat-value">8 Planets + Dwarfs</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MERCURY PANEL -->
+          <div
+            id="panel-mercury"
+            role="tabpanel"
+            aria-labelledby="tab-mercury"
+            class="tabpanel-content"
+            hidden
+          >
+            <div class="planet-layout">
+              <div class="planet-visual">
+                <div class="sphere-wrapper">
+                  <div class="planet-sphere mercury-sphere"></div>
+                  <div class="planet-shadow"></div>
+                </div>
+              </div>
+              <div class="planet-info">
+                <span class="planet-tag">Terrestrial Planet</span>
+                <h2 class="planet-title">Mercury</h2>
+                <p class="planet-desc">
+                  The smallest planet in our solar system and nearest to the
+                  Sun, Mercury is only slightly larger than Earth's Moon. It
+                  experiences extreme temperature swings from blistering heat to
+                  freezing cold.
+                </p>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                      ></i>
+                      Diameter</span
+                    >
+                    <span class="stat-value">4,879 km</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-ruler-horizontal"></i> Distance
+                      from Sun</span
+                    >
+                    <span class="stat-value">0.39 AU</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-rotate"></i> Day Length</span
+                    >
+                    <span class="stat-value">59 Earth Days</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-circle-notch"></i> Year
+                      Length</span
+                    >
+                    <span class="stat-value">88 Earth Days</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-temperature-half"></i> Avg
+                      Temp</span
+                    >
+                    <span class="stat-value">167°C</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-moon"></i> Moons</span
+                    >
+                    <span class="stat-value">0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VENUS PANEL -->
+          <div
+            id="panel-venus"
+            role="tabpanel"
+            aria-labelledby="tab-venus"
+            class="tabpanel-content"
+            hidden
+          >
+            <div class="planet-layout">
+              <div class="planet-visual">
+                <div class="sphere-wrapper">
+                  <div class="planet-sphere venus-sphere"></div>
+                  <div class="planet-shadow"></div>
+                </div>
+              </div>
+              <div class="planet-info">
+                <span class="planet-tag">Terrestrial Planet</span>
+                <h2 class="planet-title">Venus</h2>
+                <p class="planet-desc">
+                  Venus is the second planet from the Sun and our closest
+                  planetary neighbor. Its thick, toxic atmosphere traps heat in
+                  a runaway greenhouse effect, making it the hottest planet in
+                  our solar system.
+                </p>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                      ></i>
+                      Diameter</span
+                    >
+                    <span class="stat-value">12,104 km</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-ruler-horizontal"></i> Distance
+                      from Sun</span
+                    >
+                    <span class="stat-value">0.72 AU</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-rotate"></i> Day Length</span
+                    >
+                    <span class="stat-value">243 Earth Days</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-circle-notch"></i> Year
+                      Length</span
+                    >
+                    <span class="stat-value">225 Earth Days</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-temperature-half"></i> Avg
+                      Temp</span
+                    >
+                    <span class="stat-value">464°C</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-moon"></i> Moons</span
+                    >
+                    <span class="stat-value">0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EARTH PANEL -->
+          <div
+            id="panel-earth"
+            role="tabpanel"
+            aria-labelledby="tab-earth"
+            class="tabpanel-content"
+            hidden
+          >
+            <div class="planet-layout">
+              <div class="planet-visual">
+                <div class="sphere-wrapper">
+                  <div class="planet-sphere earth-sphere"></div>
+                  <div class="planet-shadow"></div>
+                </div>
+              </div>
+              <div class="planet-info">
+                <span class="planet-tag">Terrestrial Planet</span>
+                <h2 class="planet-title">Earth</h2>
+                <p class="planet-desc">
+                  Earth is our home planet, known for its abundant liquid water,
+                  diverse ecosystems, and protective nitrogen-oxygen atmosphere.
+                  It is the only known celestial body harboring life.
+                </p>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                      ></i>
+                      Diameter</span
+                    >
+                    <span class="stat-value">12,742 km</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-ruler-horizontal"></i> Distance
+                      from Sun</span
+                    >
+                    <span class="stat-value">1.00 AU</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-rotate"></i> Day Length</span
+                    >
+                    <span class="stat-value">24 Hours</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-circle-notch"></i> Year
+                      Length</span
+                    >
+                    <span class="stat-value">365.25 Days</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-temperature-half"></i> Avg
+                      Temp</span
+                    >
+                    <span class="stat-value">15°C</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-moon"></i> Moons</span
+                    >
+                    <span class="stat-value">1 (The Moon)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MARS PANEL -->
+          <div
+            id="panel-mars"
+            role="tabpanel"
+            aria-labelledby="tab-mars"
+            class="tabpanel-content"
+            hidden
+          >
+            <div class="planet-layout">
+              <div class="planet-visual">
+                <div class="sphere-wrapper">
+                  <div class="planet-sphere mars-sphere"></div>
+                  <div class="planet-shadow"></div>
+                </div>
+              </div>
+              <div class="planet-info">
+                <span class="planet-tag">Terrestrial Planet</span>
+                <h2 class="planet-title">Mars</h2>
+                <p class="planet-desc">
+                  Mars, the Red Planet, is a cold, desert-like world covered in
+                  iron-oxide dust. It features towering volcanoes, like Olympus
+                  Mons, and deep canyons, serving as a primary target for future
+                  human exploration.
+                </p>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                      ></i>
+                      Diameter</span
+                    >
+                    <span class="stat-value">6,779 km</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-ruler-horizontal"></i> Distance
+                      from Sun</span
+                    >
+                    <span class="stat-value">1.52 AU</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-rotate"></i> Day Length</span
+                    >
+                    <span class="stat-value">24.6 Hours</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-circle-notch"></i> Year
+                      Length</span
+                    >
+                    <span class="stat-value">687 Earth Days</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-temperature-half"></i> Avg
+                      Temp</span
+                    >
+                    <span class="stat-value">-62°C</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-moon"></i> Moons</span
+                    >
+                    <span class="stat-value">2 (Phobos, Deimos)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JUPITER PANEL -->
+          <div
+            id="panel-jupiter"
+            role="tabpanel"
+            aria-labelledby="tab-jupiter"
+            class="tabpanel-content"
+            hidden
+          >
+            <div class="planet-layout">
+              <div class="planet-visual">
+                <div class="sphere-wrapper">
+                  <div class="planet-sphere jupiter-sphere"></div>
+                  <div class="planet-shadow"></div>
+                </div>
+              </div>
+              <div class="planet-info">
+                <span class="planet-tag">Gas Giant</span>
+                <h2 class="planet-title">Jupiter</h2>
+                <p class="planet-desc">
+                  Jupiter is the largest planet in our solar system—more than
+                  twice as massive as all the other planets combined. Its iconic
+                  Great Red Spot is a centuries-old storm larger than Earth.
+                </p>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                      ></i>
+                      Diameter</span
+                    >
+                    <span class="stat-value">139,820 km</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-ruler-horizontal"></i> Distance
+                      from Sun</span
+                    >
+                    <span class="stat-value">5.20 AU</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-rotate"></i> Day Length</span
+                    >
+                    <span class="stat-value">9.9 Hours</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-circle-notch"></i> Year
+                      Length</span
+                    >
+                    <span class="stat-value">12 Earth Years</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-temperature-half"></i> Avg
+                      Temp</span
+                    >
+                    <span class="stat-value">-108°C</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-moon"></i> Moons</span
+                    >
+                    <span class="stat-value">95</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SATURN PANEL -->
+          <div
+            id="panel-saturn"
+            role="tabpanel"
+            aria-labelledby="tab-saturn"
+            class="tabpanel-content"
+            hidden
+          >
+            <div class="planet-layout">
+              <div class="planet-visual">
+                <div class="sphere-wrapper saturn-wrapper">
+                  <div class="saturn-rings"></div>
+                  <div class="planet-sphere saturn-sphere"></div>
+                  <div class="planet-shadow"></div>
+                </div>
+              </div>
+              <div class="planet-info">
+                <span class="planet-tag">Gas Giant</span>
+                <h2 class="planet-title">Saturn</h2>
+                <p class="planet-desc">
+                  Saturn is a majestic gas giant adorned with a spectacular,
+                  complex ring system composed of billions of ice and rock
+                  particles. It is the least dense planet, capable of floating
+                  in water.
+                </p>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                      ></i>
+                      Diameter</span
+                    >
+                    <span class="stat-value">116,460 km</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-ruler-horizontal"></i> Distance
+                      from Sun</span
+                    >
+                    <span class="stat-value">9.58 AU</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-rotate"></i> Day Length</span
+                    >
+                    <span class="stat-value">10.7 Hours</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-circle-notch"></i> Year
+                      Length</span
+                    >
+                    <span class="stat-value">29 Earth Years</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-temperature-half"></i> Avg
+                      Temp</span
+                    >
+                    <span class="stat-value">-139°C</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-moon"></i> Moons</span
+                    >
+                    <span class="stat-value">146</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- URANUS PANEL -->
+          <div
+            id="panel-uranus"
+            role="tabpanel"
+            aria-labelledby="tab-uranus"
+            class="tabpanel-content"
+            hidden
+          >
+            <div class="planet-layout">
+              <div class="planet-visual">
+                <div class="sphere-wrapper uranus-wrapper">
+                  <div class="uranus-rings"></div>
+                  <div class="planet-sphere uranus-sphere"></div>
+                  <div class="planet-shadow"></div>
+                </div>
+              </div>
+              <div class="planet-info">
+                <span class="planet-tag">Ice Giant</span>
+                <h2 class="planet-title">Uranus</h2>
+                <p class="planet-desc">
+                  Uranus is a pale blue-green ice giant with an extreme, unique
+                  98-degree tilt, causing it to rotate virtually on its side. It
+                  was the first planet discovered using a telescope.
+                </p>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                      ></i>
+                      Diameter</span
+                    >
+                    <span class="stat-value">50,724 km</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-ruler-horizontal"></i> Distance
+                      from Sun</span
+                    >
+                    <span class="stat-value">19.18 AU</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-rotate"></i> Day Length</span
+                    >
+                    <span class="stat-value">17.2 Hours</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-circle-notch"></i> Year
+                      Length</span
+                    >
+                    <span class="stat-value">84 Earth Years</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-temperature-half"></i> Avg
+                      Temp</span
+                    >
+                    <span class="stat-value">-197°C</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-moon"></i> Moons</span
+                    >
+                    <span class="stat-value">28</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- NEPTUNE PANEL -->
+          <div
+            id="panel-neptune"
+            role="tabpanel"
+            aria-labelledby="tab-neptune"
+            class="tabpanel-content"
+            hidden
+          >
+            <div class="planet-layout">
+              <div class="planet-visual">
+                <div class="sphere-wrapper">
+                  <div class="planet-sphere neptune-sphere"></div>
+                  <div class="planet-shadow"></div>
+                </div>
+              </div>
+              <div class="planet-info">
+                <span class="planet-tag">Ice Giant</span>
+                <h2 class="planet-title">Neptune</h2>
+                <p class="planet-desc">
+                  Neptune is a deep-blue ice giant whipped by supersonic winds
+                  reaching up to 2,100 km/h. It is the most distant planet in
+                  our solar system, discovered through mathematical predictions.
+                </p>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                      ></i>
+                      Diameter</span
+                    >
+                    <span class="stat-value">49,244 km</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-ruler-horizontal"></i> Distance
+                      from Sun</span
+                    >
+                    <span class="stat-value">30.07 AU</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-rotate"></i> Day Length</span
+                    >
+                    <span class="stat-value">16.1 Hours</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-circle-notch"></i> Year
+                      Length</span
+                    >
+                    <span class="stat-value">165 Earth Years</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-temperature-half"></i> Avg
+                      Temp</span
+                    >
+                    <span class="stat-value">-201°C</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-moon"></i> Moons</span
+                    >
+                    <span class="stat-value">16</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PLUTO PANEL -->
+          <div
+            id="panel-pluto"
+            role="tabpanel"
+            aria-labelledby="tab-pluto"
+            class="tabpanel-content"
+            hidden
+          >
+            <div class="planet-layout">
+              <div class="planet-visual">
+                <div class="sphere-wrapper">
+                  <div class="planet-sphere pluto-sphere"></div>
+                  <div class="planet-shadow"></div>
+                </div>
+              </div>
+              <div class="planet-info">
+                <span class="planet-tag">Dwarf Planet</span>
+                <h2 class="planet-title">Pluto</h2>
+                <p class="planet-desc">
+                  Pluto is a complex, icy dwarf planet in the Kuiper Belt,
+                  famous for its giant, heart-shaped nitrogen ice glacier named
+                  Tombaugh Regio. It was considered the ninth planet until its
+                  reclassification in 2006.
+                </p>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                      ></i>
+                      Diameter</span
+                    >
+                    <span class="stat-value">2,376 km</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-ruler-horizontal"></i> Distance
+                      from Sun</span
+                    >
+                    <span class="stat-value">39.48 AU</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-rotate"></i> Day Length</span
+                    >
+                    <span class="stat-value">6.4 Earth Days</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-circle-notch"></i> Year
+                      Length</span
+                    >
+                    <span class="stat-value">248 Earth Years</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-temperature-half"></i> Avg
+                      Temp</span
+                    >
+                    <span class="stat-value">-228°C</span>
+                  </div>
+                  <div class="stat-card">
+                    <span class="stat-label"
+                      ><i class="fa-solid fa-moon"></i> Moons</span
+                    >
+                    <span class="stat-value">5 (Charon, Nix, Styx...)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="tab-list.js"></script>
+  </body>
+</html>

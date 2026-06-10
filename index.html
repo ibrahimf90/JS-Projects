@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibrahim's Projects Sandbox | Creative Developer Portfolio</title>
+    <meta
+      name="description"
+      content="A dedicated space where I experiment, build, and showcase small web projects using HTML, CSS, javascript and modern design principles."
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="bg-gradient"></div>
+    <div class="bg-blur"></div>
+
+    <!-- Header / Navbar -->
+    <header id="navbar">
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo">IBRAHIM<span>.DEV</span></a>
+          <div class="nav-menu">
+            <button class="menu-toggle" id="menuToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+              <li class="nav-item-dropdown">
+                <a href="#" class="nav-link-projects"
+                  >Projects <i class="fas fa-chevron-down"></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#utilities">Utilities</a></li>
+                  <li><a href="#games">Games & Fun</a></li>
+                  <li><a href="#forms">Forms & Validation</a></li>
+                  <li><a href="#interactive">Interactive</a></li>
+                  <li><a href="#apps">Apps</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Projects Gallery Section -->
+      <section class="gallery" id="gallery">
+        <div class="container">
+          <!-- Utilities Section -->
+          <div class="projects-section" id="utilities">
+            <h3 class="subsection-title">
+              <i class="fas fa-tools"></i> Utilities & Tools
+            </h3>
+            <div class="projects-grid">
+              <!-- Bank Account Manager -->
+              <article class="project-card">
+                <div class="project-image project-image-bank">
+                  <i class="fas fa-university project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / Banking</span>
+                  <h3 class="project-title">Bank Account Manager</h3>
+                  <p class="project-desc">
+                    Track your bank accounts with deposit, withdrawal, and
+                    balance management. Features include transaction history and
+                    account status display.
+                  </p>
+                  <a
+                    href="Projects/bank-account/bank-account.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Calories Counter -->
+              <article class="project-card">
+                <div class="project-image project-image-calories">
+                  <i class="fas fa-fire project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / Health</span>
+                  <h3 class="project-title">Calories Counter</h3>
+                  <p class="project-desc">
+                    Monitor your daily calorie intake. Add meals, track
+                    calories, and maintain a healthy lifestyle with instant
+                    calculations and daily summaries.
+                  </p>
+                  <a
+                    href="Projects/calories-counter/calorie-counter.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Voting System -->
+              <article class="project-card">
+                <div class="project-image project-image-voting">
+                  <i class="fas fa-check-circle project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / Polls</span>
+                  <h3 class="project-title">Voting System</h3>
+                  <p class="project-desc">
+                    Create and vote on polls. Real-time vote counting,
+                    percentage calculations, and visual feedback for each voting
+                    option.
+                  </p>
+                  <a
+                    href="Projects/voting-system/voting-system.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- To-Do List -->
+              <article class="project-card">
+                <div class="project-image project-image-todo">
+                  <i class="fas fa-list-check project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / Productivity</span>
+                  <h3 class="project-title">To-Do List</h3>
+                  <p class="project-desc">
+                    Organize your tasks with an intuitive to-do list. Add,
+                    complete, and delete tasks with a clean, modern interface.
+                  </p>
+                  <a
+                    href="Projects/to-do-list/to-do-list.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Todo App -->
+              <article class="project-card">
+                <div
+                  class="project-image"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      #6366f1 0%,
+                      #06b6d4 100%
+                    );
+                  "
+                >
+                  <i class="fas fa-tasks project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / LocalStorage</span>
+                  <h3 class="project-title">Todo App</h3>
+                  <p class="project-desc">
+                    Manage and track your goals with local storage persistence.
+                    Features custom animated inputs, modal confirmation dialogs,
+                    and a highly polished task list.
+                  </p>
+                  <a
+                    href="Projects/todo-app/todo-app.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- END Utilities Section -->
+
+          <!-- Games & Fun Section -->
+          <div class="projects-section" id="games">
+            <h3 class="subsection-title">
+              <i class="fas fa-gamepad"></i> Games & Fun
+            </h3>
+            <div class="projects-grid">
+              <!-- Drum Machine -->
+              <article class="project-card">
+                <div class="project-image project-image-drum">
+                  <i class="fas fa-drum project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / Music</span>
+                  <h3 class="project-title">Drum Machine</h3>
+                  <p class="project-desc">
+                    Create beats and rhythms with an interactive drum machine.
+                    Trigger sounds with keyboard or mouse clicks.
+                  </p>
+                  <a
+                    href="Projects/drum-machine/drum-machine.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Media Playlist -->
+              <article class="project-card">
+                <div class="project-image project-image-playlist">
+                  <i class="fas fa-music project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / Audio / Player</span>
+                  <h3 class="project-title">Media Playlist</h3>
+                  <p class="project-desc">
+                    A beautiful music player with playlist management. Play,
+                    pause, skip tracks, and enjoy your favorite songs with full
+                    controls.
+                  </p>
+                  <a
+                    href="Projects/media-playlist/media-palylist.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Quiz Game -->
+              <article class="project-card">
+                <div class="project-image project-image-quiz">
+                  <i class="fas fa-question-circle project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / Quiz</span>
+                  <h3 class="project-title">Quiz Game</h3>
+                  <p class="project-desc">
+                    Test your knowledge with an engaging quiz game. Multiple
+                    questions with instant feedback and score tracking.
+                  </p>
+                  <a
+                    href="Projects/quiz-game/quiz-game.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Games Collection -->
+              <article class="project-card">
+                <div class="project-image project-image-games">
+                  <i class="fas fa-dice project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / Games</span>
+                  <h3 class="project-title">Games Collection</h3>
+                  <p class="project-desc">
+                    A collection of fun mini-games and interactive experiences.
+                    Try various games and challenges.
+                  </p>
+                  <a href="Projects/games/games.html" class="project-link">
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Switch Colors -->
+              <article class="project-card">
+                <div class="project-image project-image-colors">
+                  <i class="fas fa-palette project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / Colors</span>
+                  <h3 class="project-title">Switch Colors</h3>
+                  <p class="project-desc">
+                    Generate random colors and switch between different color
+                    schemes. Perfect for design inspiration.
+                  </p>
+                  <a
+                    href="Projects/switch-colors/switch-colors.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- END Games & Fun Section -->
+
+          <!-- Forms & Validation Section -->
+          <div class="projects-section" id="forms">
+            <h3 class="subsection-title">
+              <i class="fas fa-clipboard-list"></i> Forms & Validation
+            </h3>
+            <div class="projects-grid">
+              <!-- Form Validation -->
+              <article class="project-card">
+                <div class="project-image project-image-form">
+                  <i class="fas fa-check-double project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / Regex / Forms</span>
+                  <h3 class="project-title">Form Validation</h3>
+                  <p class="project-desc">
+                    Advanced form validation with real-time feedback.
+                    Regex-based validations for email, phone, and custom
+                    patterns.
+                  </p>
+                  <a
+                    href="Projects/form-validation/form-validation.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Email Secret -->
+              <article class="project-card">
+                <div class="project-image project-image-email">
+                  <i class="fas fa-envelope project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / Security</span>
+                  <h3 class="project-title">Email Secret</h3>
+                  <p class="project-desc">
+                    Hide email addresses and secrets. Encode/decode
+                    functionality for keeping sensitive information private.
+                  </p>
+                  <a
+                    href="Projects/email-secret/email-secret.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- END Forms & Validation Section -->
+
+          <!-- Interactive Section -->
+          <div class="projects-section" id="interactive">
+            <h3 class="subsection-title">
+              <i class="fas fa-mouse"></i> Interactive Components
+            </h3>
+            <div class="projects-grid">
+              <!-- Tab List -->
+              <article class="project-card">
+                <div class="project-image project-image-tabs">
+                  <i class="fas fa-folder-open project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / UI</span>
+                  <h3 class="project-title">Tab List</h3>
+                  <p class="project-desc">
+                    Interactive tabbed interface with smooth transitions. Switch
+                    between different content sections seamlessly.
+                  </p>
+                  <a
+                    href="Projects/tab-list/tab-list.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- END Interactive Section -->
+
+          <!-- Apps Section -->
+          <div class="projects-section" id="apps">
+            <h3 class="subsection-title">
+              <i class="fas fa-cloud-sun"></i> Applications
+            </h3>
+            <div class="projects-grid">
+              <!-- Weather App -->
+              <article class="project-card">
+                <div class="project-image project-image-weather">
+                  <i class="fas fa-cloud-sun-rain project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / API / Weather</span>
+                  <h3 class="project-title">Weather App</h3>
+                  <p class="project-desc">
+                    Real-time weather information for any location. Displays
+                    temperature, humidity, wind speed, and forecasts with
+                    beautiful UI.
+                  </p>
+                  <a
+                    href="Projects/Weather%20App/WeatherApp.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Bookmark Manager -->
+              <article class="project-card">
+                <div class="project-image project-image-bookmark">
+                  <i class="fas fa-bookmark project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag"
+                    >JavaScript / LocalStorage / UI</span
+                  >
+                  <h3 class="project-title">Bookmark Manager</h3>
+                  <p class="project-desc">
+                    Save, organize, and manage your favorite web links by
+                    categories with glassmorphism UI, local storage persistence,
+                    and secure deletion.
+                  </p>
+                  <a
+                    href="Projects/bookmark/bookmark.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Shopping Cart -->
+              <article class="project-card">
+                <div
+                  class="project-image"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      #f59e0b 0%,
+                      #ec4899 100%
+                    );
+                  "
+                >
+                  <i class="fas fa-shopping-cart project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">JavaScript / E-commerce</span>
+                  <h3 class="project-title">Shopping Cart</h3>
+                  <p class="project-desc">
+                    Interactive dessert shopping cart with add-to-cart
+                    functionality, real-time calculations, cart display toggle,
+                    and beautiful product cards with pricing.
+                  </p>
+                  <a
+                    href="Projects/shopping-cart/shopping-cart.html"
+                    class="project-link"
+                  >
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Recipe Ingredient Converter -->
+              <article class="project-card">
+                <div class="project-image project-image-recipe">
+                  <i class="fas fa-utensils project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag"
+                    >JavaScript / Cooking / Converter</span
+                  >
+                  <h3 class="project-title">Recipe Ingredient Converter</h3>
+                  <p class="project-desc">
+                    Convert recipe ingredients between different units and scale
+                    recipes for any number of servings. Features instant
+                    conversions between cups, grams, ounces, and teaspoons.
+                  </p>
+                  <a href="Projects/receipe/receipe.html" class="project-link">
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Brazil Football Squad -->
+              <article class="project-card">
+                <div class="project-image project-image-brazil">
+                  <i class="fas fa-futbol project-icon"></i>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag"
+                    >JavaScript / Sports / World Cup 2026</span
+                  >
+                  <h3 class="project-title">Brazil Football Squad</h3>
+                  <p class="project-desc">
+                    Explore Brazil's star players for World Cup 2026. Features
+                    player profiles with positions, bios, career stats, and a
+                    load-more functionality to discover the full squad.
+                  </p>
+                  <a href="Projects/more/moreload.html" class="project-link">
+                    Launch App
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- END Apps Section -->
+        </div>
+        <!-- END .container -->
+      </section>
+      <!-- END .gallery -->
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 IBRAHIM FAYYAD. ALL RIGHTS RESERVED.</p>
+        <div class="footer-social">
+          <a
+            href="https://github.com/ibrahimf90"
+            target="_blank"
+            class="github-link"
+          >
+            <i class="fa-brands fa-github"></i>GitHub Profile
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+  </body>
+</html>

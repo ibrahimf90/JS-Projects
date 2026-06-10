@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calorie-counter.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Calorie Counter</title>
+  </head>
+  <body>
+    <!-- Ambient -->
+    <div class="ambient" aria-hidden="true">
+      <div class="ambient__orb ambient__orb--1"></div>
+      <div class="ambient__orb ambient__orb--2"></div>
+      <div class="ambient__orb ambient__orb--3"></div>
+      <div class="ambient__grid"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header__inner">
+        <a href="../../index.html" class="header__back">
+          <i class="fas fa-arrow-left" aria-hidden="true"></i>
+          <span>Back to Projects Hub</span>
+        </a>
+        <div class="header__brand">
+          <div class="header__icon" aria-hidden="true">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"
+              />
+            </svg>
+          </div>
+          <h1>Calorie Counter</h1>
+        </div>
+        <div class="header__date" id="header-date">—</div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="layout">
+        <!-- LEFT PANEL -->
+        <div class="panel panel--left">
+          <form id="calorie-counter" novalidate>
+            <!-- Budget -->
+            <section class="card card--budget">
+              <div class="card__label">
+                <span class="card__label-line"></span>
+                <span>Daily Target</span>
+              </div>
+              <div class="budget-field">
+                <input
+                  type="number"
+                  min="0"
+                  id="budget"
+                  placeholder="2000"
+                  required
+                  autocomplete="off"
+                />
+                <div class="budget-field__suffix">
+                  <span class="budget-field__unit">kcal</span>
+                  <span class="budget-field__sub">/ day</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- Food Log -->
+            <section class="card card--entries">
+              <div class="entries-header">
+                <div class="card__label">
+                  <span class="card__label-line"></span>
+                  <span>Food Log</span>
+                </div>
+                <button
+                  type="button"
+                  id="add-entry"
+                  class="btn-add"
+                  aria-label="Add entry"
+                >
+                  <i class="fas fa-plus" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <!-- Tabs — JS selects with .cat-tab -->
+              <div class="cat-tabs" role="tablist">
+                <button
+                  type="button"
+                  class="cat-tab active"
+                  data-cat="breakfast"
+                  role="tab"
+                  aria-selected="true"
+                >
+                  <i class="fas fa-sun" aria-hidden="true"></i>
+                  <span>Breakfast</span>
+                </button>
+                <button
+                  type="button"
+                  class="cat-tab"
+                  data-cat="lunch"
+                  role="tab"
+                >
+                  <i class="fas fa-cloud-sun" aria-hidden="true"></i>
+                  <span>Lunch</span>
+                </button>
+                <button
+                  type="button"
+                  class="cat-tab"
+                  data-cat="dinner"
+                  role="tab"
+                >
+                  <i class="fas fa-moon" aria-hidden="true"></i>
+                  <span>Dinner</span>
+                </button>
+                <button
+                  type="button"
+                  class="cat-tab"
+                  data-cat="snacks"
+                  role="tab"
+                >
+                  <i class="fas fa-cookie-bite" aria-hidden="true"></i>
+                  <span>Snacks</span>
+                </button>
+                <button
+                  type="button"
+                  class="cat-tab cat-tab--exercise"
+                  data-cat="exercise"
+                  role="tab"
+                >
+                  <i class="fas fa-bolt" aria-hidden="true"></i>
+                  <span>Exercise</span>
+                </button>
+              </div>
+
+              <!-- Entry list -->
+              <div class="entry-list" id="entry-list">
+                <div class="empty-state" id="empty-state">
+                  <div class="empty-state__icon" aria-hidden="true">
+                    <i class="fas fa-utensils"></i>
+                  </div>
+                  <p>No entries yet</p>
+                  <p class="empty-state__hint">
+                    Press <kbd>+</kbd> to add a meal
+                  </p>
+                </div>
+              </div>
+
+              <!-- Hidden fieldsets for JS data -->
+              <div style="display: none" aria-hidden="true">
+                <fieldset id="breakfast">
+                  <div class="input-container"></div>
+                </fieldset>
+                <fieldset id="lunch">
+                  <div class="input-container"></div>
+                </fieldset>
+                <fieldset id="dinner">
+                  <div class="input-container"></div>
+                </fieldset>
+                <fieldset id="snacks">
+                  <div class="input-container"></div>
+                </fieldset>
+                <fieldset id="exercise">
+                  <div class="input-container"></div>
+                </fieldset>
+              </div>
+            </section>
+
+            <!-- Actions -->
+            <div class="actions">
+              <button type="submit" class="btn-calculate">
+                <span class="btn-calculate__text">Calculate</span>
+                <span class="btn-calculate__icon" aria-hidden="true">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+              </button>
+              <button
+                type="button"
+                id="clear"
+                class="btn-reset"
+                aria-label="Reset all"
+              >
+                <i class="fas fa-rotate-left" aria-hidden="true"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="panel panel--right">
+          <div class="output-card" id="output-card">
+            <!-- Idle -->
+            <div class="idle-state" id="idle-state">
+              <div class="idle-state__visual" aria-hidden="true">
+                <div class="idle-state__ring">
+                  <div class="idle-state__flame">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="idle-state__title">Ready to track</p>
+              <p class="idle-state__sub">
+                Add your meals and hit <strong>Calculate</strong>
+              </p>
+            </div>
+
+            <!-- Results (hidden until calculated) -->
+            <div id="results-inner" class="results-hidden">
+              <div class="ring-section">
+                <div class="ring-svg-wrap">
+                  <svg
+                    viewBox="0 0 180 180"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="ringGrad"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
+                        <stop offset="0%" stop-color="var(--accent)" />
+                        <stop offset="100%" stop-color="var(--accent-warm)" />
+                      </linearGradient>
+                    </defs>
+                    <circle class="ring-track" cx="90" cy="90" r="72" />
+                    <circle
+                      class="ring-fill"
+                      id="ring-arc"
+                      cx="90"
+                      cy="90"
+                      r="72"
+                      stroke-dasharray="452.39"
+                      stroke-dashoffset="452.39"
+                    />
+                  </svg>
+                  <div class="ring-center">
+                    <span class="ring-number" id="ring-number">—</span>
+                    <span class="ring-unit">kcal</span>
+                    <span class="ring-sub" id="ring-sub">remaining</span>
+                  </div>
+                </div>
+                <div class="ring-badge" id="ring-badge">—</div>
+              </div>
+
+              <div class="stats-grid">
+                <div class="stat-box">
+                  <span class="stat-val" id="stat-budget">—</span>
+                  <span class="stat-lbl">Budget</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-box">
+                  <span class="stat-val" id="stat-consumed">—</span>
+                  <span class="stat-lbl">Consumed</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-box">
+                  <span class="stat-val stat-val--burn" id="stat-burned"
+                    >—</span
+                  >
+                  <span class="stat-lbl">Burned</span>
+                </div>
+              </div>
+
+              <div class="bars-section">
+                <div class="bars-title">Meal Breakdown</div>
+                <div id="meal-bars"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tip -->
+          <div class="tip-card" id="tip-card">
+            <div class="tip-card__icon" aria-hidden="true">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <p id="tip-text">
+              A typical adult needs 2,000–2,500 kcal per day depending on
+              activity level.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Legacy output -->
+    <div id="output" class="output hide"></div>
+
+    <script src="calorie-counter.js"></script>
+    <script>
+      const d = new Date();
+      document.getElementById("header-date").textContent = d.toLocaleDateString(
+        "en-US",
+        { weekday: "long", month: "long", day: "numeric" },
+      );
+    </script>
+  </body>
+</html>

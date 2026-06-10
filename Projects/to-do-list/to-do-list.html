@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium To-Do Management</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="to-do-list.css">
+</head>
+
+<body>
+    <div class="bg-blur"></div>
+
+    <div class="container">
+        <a href="../../index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+            </svg>
+            Back to Projects Hub
+        </a>
+
+        <header>
+            <h1>To-Do Management</h1>
+            <p>Streamlined productivity with high-fidelity UI</p>
+            <div class="stats">
+                <span><strong id="stat-total">0</strong> total</span>
+                <span><strong id="stat-pending">0</strong> pending</span>
+                <span><strong id="stat-done">0</strong> done</span>
+            </div>
+        </header>
+
+        <div class="input-row">
+            <input type="text" id="task-input" placeholder="What's your next mission?" maxlength="120" />
+            <button id="add-btn" title="Add task">+</button>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="done">Done</button>
+        </div>
+
+        <ul id="todo-list"></ul>
+
+        <div class="footer-actions">
+            <button class="text-btn" id="clear-done-btn" disabled>Clear completed</button>
+        </div>
+    </div>
+
+    <script src="to-do-list.js"></script>
+</body>
+
+</html>

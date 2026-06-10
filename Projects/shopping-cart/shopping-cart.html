@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart - Desserts</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="shopping-cart.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="../../index.html" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Projects Hub
+        </a>
+        <h1 class="title">🍰 Desserts Shop</h1>
+      </div>
+    </header>
+    <main>
+      <aside class="category-sidebar">
+        <h3 class="sidebar-title">Categories</h3>
+        <nav class="category-nav">
+          <button class="category-btn active" data-category="all">
+            <i class="fas fa-th-large"></i> All Products
+          </button>
+          <button class="category-btn" data-category="cupcakes">
+            <i class="fas fa-birthday-cake"></i> Cupcakes
+          </button>
+          <button class="category-btn" data-category="macarons">
+            <i class="fas fa-cookie"></i> Macarons
+          </button>
+          <button class="category-btn" data-category="pretzels">
+            <i class="fas fa-bacon"></i> Pretzels
+          </button>
+          <button class="category-btn" data-category="ice-cream">
+            <i class="fas fa-ice-cream"></i> Ice Cream
+          </button>
+        </nav>
+      </aside>
+
+      <div class="main-content">
+        <button
+          id="cart-btn"
+          type="button"
+          class="btn"
+          aria-expanded="false"
+          aria-controls="cart-container"
+        >
+          <span id="show-hide-cart">Show</span> Cart
+          <span id="cart-notification" class="cart-notification">0</span>
+        </button>
+        <div id="cart-container" class="cart-panel" hidden>
+          <header class="cart-header">
+            <div class="cart-heading">
+              <h2 class="cart-title">Your Cart</h2>
+              <button
+                type="button"
+                class="cart-close-btn"
+                id="close-cart-btn"
+                aria-label="Close cart"
+              >
+                <i class="fas fa-times" aria-hidden="true"></i>
+              </button>
+            </div>
+            <button type="button" class="btn" id="clear-cart-btn" disabled>
+              Clear Cart
+            </button>
+          </header>
+
+          <div id="products-container" class="cart-items" aria-live="polite">
+            <p class="cart-empty" id="cart-empty-msg">Your cart is empty.</p>
+          </div>
+
+          <footer class="cart-summary">
+            <div class="cart-summary-row">
+              <span>Subtotal</span>
+              <span id="subtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-row">
+              <span>Tax (8.25%)</span>
+              <span id="taxes">$0.00</span>
+            </div>
+            <div class="cart-summary-row cart-summary-total">
+              <span>Total</span>
+              <span id="total">$0.00</span>
+            </div>
+            <button type="button" class="btn place-order-btn" id="place-order-btn">
+              Place Order
+            </button>
+          </footer>
+        </div>
+        <div id="dessert-card-container"></div>
+      </div>
+    </main>
+    <script src="shopping-cart.js"></script>
+  </body>
+</html>

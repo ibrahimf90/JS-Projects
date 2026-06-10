@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Polling System</title>
+    <link rel="stylesheet" href="voting-system.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        <header>
+            <a href="../../index.html" class="back-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Projects Hub
+            </a>
+            <h1>POLLING<span>VOTE</span></h1>
+            <p class="subtitle">Secure Distributed Polling Interface</p>
+        </header>
+
+        <main id="voting-system">
+            <!-- Add Option Section -->
+            <section class="card glass">
+                <h2>Initialize Option</h2>
+                <div class="input-group">
+                    <input type="text" id="option-input" placeholder="Enter option name...">
+                    <button id="add-option-btn" class="btn-primary">Add Option</button>
+                </div>
+            </section>
+
+            <!-- Cast Vote Section -->
+            <section class="card glass">
+                <h2>Cast Your Vote</h2>
+                <div class="form-group">
+                    <select id="option-select">
+                        <option value="" disabled selected>Select an option</option>
+                    </select>
+                    <input type="text" id="voter-id-input" placeholder="Your Unique Voter ID">
+                    <button id="vote-btn" class="btn-secondary">Submit Vote</button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="card glass results-card">
+                <div class="results-header">
+                    <h2>Live Results</h2>
+                    <button id="refresh-results-btn" class="btn-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 4v6h-6"></path>
+                            <path d="M1 20v-6h6"></path>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="results-display">
+                    <pre id="raw-results">Initialize the poll to see results...</pre>
+                </div>
+            </section>
+
+            <!-- Status Logs -->
+            <div id="status-log">
+                <p id="status-message">System Online</p>
+            </div>
+        </main>
+    </div>
+    <script src="voting-system.js"></script>
+</body>
+
+</html>
